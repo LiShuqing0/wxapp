@@ -1,0 +1,29 @@
+<%= form_for @article  do |f| %>
+  <div class="field">
+    标题<br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    摘要<br>
+    <%= f.text_field :abstract %>
+  </div>
+  <div class="field">
+    主体<br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    状态<br>
+    <%= f.select :status, Article.status_options[0..1], {}, class: 'select' %>
+  </div>
+  <div class="field">
+    是否发布<br>
+    <% Article::IS_PUBLISHED.each do |k ,v| %>
+      <%= f.radio_button :published, k, :checked => @article.published == k %> 
+      <%= label "published#{k}", v %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <% end -%>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "创建" %>
+  </div>
+<% end %>
