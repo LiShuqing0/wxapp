@@ -4,7 +4,7 @@ source 'http://gems.ruby-china.org/'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -55,7 +55,7 @@ gem 'exception_notification'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
  group :development, :test do
- gem 'taps'
+  gem 'taps'
   gem 'rvm'
   gem 'byebug', platform: :mri
   gem 'sqlite3'
