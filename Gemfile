@@ -58,7 +58,7 @@ gem 'exception_notification'
   gem 'taps'
   gem 'rvm'
   gem 'byebug', platform: :mri
-  gem 'sqlite3'
+ #gem 'sqlite3-ruby', :require => 'sqlite3'
  end
  
  group :production do 
