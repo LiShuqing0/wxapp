@@ -54,4 +54,12 @@ gem 'exception_notification'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ group :development, :test do
+   gem 'byebug', platform: :mri  
+   gem 'sqlite3'
+ end
+ 
+ group :production do 
+  gem 'pg'
+ end
 
