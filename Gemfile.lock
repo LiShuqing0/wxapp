@@ -191,6 +191,7 @@ DEPENDENCIES
   pry-rails (= 0.3.2)
   rails (= 4.1.7)
   rails-i18n
+  rake
   ransack (= 1.5.1)
   rvm
   sass-rails (~> 4.0.3)
