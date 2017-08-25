@@ -7,7 +7,7 @@ gem 'pg'
 gem 'rake'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-gem 'sqlite3-ruby'
+#gem 'sqlite3-ruby'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,6 +46,8 @@ gem 'pry-rails', '0.3.2'
 gem "default_value_for", "3.0.0.1"
 gem 'exception_notification'
 
+gem 'rest-client'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,11 +59,6 @@ gem 'exception_notification'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
- group :development, :test do
-  gem 'taps'
-  gem 'rvm'
-  gem 'byebug', platform: :mri
- #gem 'sqlite3-ruby', :require => 'sqlite3'
- end
-  
-
+group :development, :test do # <<<< :development, not devlopment
+  gem 'sqlite3'
+end
