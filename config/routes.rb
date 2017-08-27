@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   resources :web_sites, only: [] do
     collection do
-      get :rose, :fireworks
+      get :rose, :fireworks, :heart
     end
   end
 end

@@ -7,4 +7,8 @@ class WebSitesController < ApplicationController
   def fireworks
     render layout: false
   end
+  
+  def heart
+    render layout: false
+  end
 end
