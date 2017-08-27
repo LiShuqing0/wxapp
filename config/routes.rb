@@ -55,5 +55,11 @@ Rails.application.routes.draw do
   #   end
   root to: 'articles#index'
 
-  resources :articles 
+  resources :articles
+
+  resources :web_sites, only: [] do
+    collection do
+      get :rose, :fireworks
+    end
+  end
 end
