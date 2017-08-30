@@ -2,7 +2,17 @@ class ArticlesController < ApplicationController
   before_filter :set_article, only: [:show]
 	
   def index
-  	@query = Article.show.ransack(params[:q])
+    if params[:type] == "my"
+      @article = Article.show
+    elsif params[:type] == "pass"
+      @article = Article.audit_pass
+    elsif params[:type] == "wait"
+      @article = Article.draft
+    else
+      @article = Article.audit_pass
+    end
+
+  	@query = @article.ransack(params[:q])
     @articles = @query.result.page(params[:page]).per(10)
     respond_to :html, :json
   end
