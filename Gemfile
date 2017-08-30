@@ -41,6 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'acts_as_enum', '~> 1.3.1'
 gem 'ransack'
 gem 'kaminari', '0.16.1'
+gem 'bcrypt',       '3.1.11'
   
 group :development, :test do  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console  
