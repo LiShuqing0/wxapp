@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :set_article, only: [:show]
+  before_filter :set_article, only: [:show,:destroy]
 	
   def index
     if params[:type] == "my"
@@ -32,6 +32,11 @@ class ArticlesController < ApplicationController
 
   def show
     respond_to :html, :json
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to :back
   end
 
   private
