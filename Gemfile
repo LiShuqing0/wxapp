@@ -45,6 +45,7 @@ gem 'bcrypt',       '3.1.11'
 gem 'pry-rails'
 gem 'pry-remote'
 gem 'pry-nav'
+gem 'rest-client'
   
 group :development, :test do  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console  
