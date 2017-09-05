@@ -42,6 +42,9 @@ gem 'acts_as_enum', '~> 1.3.1'
 gem 'ransack'
 gem 'kaminari', '0.16.1'
 gem 'bcrypt',       '3.1.11'
+gem 'pry-rails'
+gem 'pry-remote'
+gem 'pry-nav'
   
 group :development, :test do  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console  
