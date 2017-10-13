@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>测试</title>
+    <%= stylesheet_link_tag "back" %>
+    <%= javascript_include_tag "back" %>
+    
+    <%= csrf_meta_tag %>
+  </head>
+<body>
+  <section id="container" >
+    <%= render "/back/shared/head" %>
+    <%= render "/back/shared/nav" %>
+    <%= yield %>
+    <%= render "/back/shared/foot" %>
+  </section>
+
+</body>
+</html>

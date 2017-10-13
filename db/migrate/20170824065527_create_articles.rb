@@ -7,6 +7,8 @@ class CreateArticles < ActiveRecord::Migration
       t.text     :body, comment: "主体"
       t.integer  :status, default: 1, comment: "状态"
       t.integer  :position, comment: "排序"
+      t.integer  :like_count, default: 0
+      t.integer  :view_count, default: 0
       t.boolean  :published, default: true, comment: "发布"
       t.datetime :created_at
       t.datetime :updated_at

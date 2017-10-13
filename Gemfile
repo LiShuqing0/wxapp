@@ -3,6 +3,7 @@ source 'http://gems.ruby-china.org/'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'  
 gem 'rails', '4.1.7'  
 # Use sqlite3 as the database for Active Record  
+gem 'mysql2'
   
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]  
 gem 'coffee-script-source','1.8.0'  
@@ -18,7 +19,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Haml as the templating library  
 gem 'haml'  
 # Use jquery as the JavaScript library  
-gem 'jquery-rails'  
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks  
 gem 'turbolinks'  
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder  
@@ -43,6 +45,10 @@ gem 'pry-rails'
 gem 'pry-remote'
 gem 'pry-nav'
 gem 'rest-client'
+
+gem "select2-rails"
+# xml解析
+gem "nokogiri", "1.6.7.2"
   
 group :development, :test do  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console  
