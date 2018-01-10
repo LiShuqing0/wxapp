@@ -17,16 +17,24 @@
       </li>
 
       <li class="sub-menu">
-        <a href="javascript:;" >
+        <%= link_to back_articles_path, class: "#{'active' if controller_name == 'articles' }" do %>
+          <i class="fa fa-dashboard"></i>
+          <span>资讯管理</span>
+        <% end %>
+      </li>
+
+      <li class="sub-menu">
+        <a href="javascript:;" class="<%= 'active' if (%W(accounts).include?(controller_name)) %>" >
           <i class="fa fa-desktop"></i>
           <span>用户管理</span>
         </a>
         <ul class="sub">
-          <li><a  href="general.html">用户列表</a></li>
-          <li><a  href="buttons.html">账户管理</a></li>
+          <li class="<%= 'active' if current_page?(back_accounts_path) %>"><%= link_to '用户列表', back_accounts_path %></li>
           <li><a  href="panels.html">菜单0-3</a></li>
         </ul>
       </li>
+
+      
 
       <li class="sub-menu">
         <a href="javascript:;" >
@@ -40,12 +48,12 @@
           </ul>
       </li>
       <li class="sub-menu">
-        <a class="active" href="javascript:;" >
+        <a class="" href="javascript:;" >
           <i class="fa fa-book"></i>
           <span>菜单2</span>
         </a>
         <ul class="sub">
-          <li class="active"><a  href="blank.html">菜单2-1</a></li>
+          <li class=""><a  href="blank.html">菜单2-1</a></li>
           <li><a  href="login.html">菜单2-2</a></li>
           <li><a  href="lock_screen.html">菜单2-3</a></li>
         </ul>

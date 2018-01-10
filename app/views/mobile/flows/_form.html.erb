@@ -1,0 +1,107 @@
+<%= form_for @flow, url: @flow.new_record? ? mobile_flows_path : mobile_flow_path(@flow) do |f| %>
+  <div class="dingdanlist">
+    <table>
+      <tr>
+        <td colspan="3" style="height:10px; background:#efefef;padding:0;"></td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">类别</td>
+        <td align="right">
+          <%= f.select :category, Flow.category_options, {include_blank: '请选择'}, class: "hui" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">支付方式</td>
+        <td align="right">
+          <%= f.select :category, Flow.paytype_options, {include_blank: '请选择'}, class: "hui" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">价格</td>
+        <td align="right">
+          <%= f.number_field :price, placeholder: "请输入价格" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">数量</td>
+        <td align="right">
+          <%= f.number_field :qty, placeholder: "请输入数量" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">总价</td>
+        <td align="right">
+          <%= f.number_field :amount, placeholder: "总价" ,style: " text-align: right;" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="60%" colspan="2">备注</td>
+        <td align="right">
+          <%= f.text_area :description, placeholder: "备注" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="15%">
+          <img src="" />
+        </td>
+        <td width="50%">
+          <h3>三级分销农庄有机瓢瓜400g</h3>
+          <time>下单时间：2015-08-11  13:51</time>
+        </td>
+        <td align="right"><span class="qingdan">X 1</span></td>
+      </tr>
+
+      <tr>
+        <th colspan="3"><strong class="orange">¥36.60</strong></th>
+      </tr>
+     
+      <tr>
+        <td class="dingimg" width="75%" colspan="2">商品金额</td>
+        <td align="right"><strong class="orange">¥68.80</strong></td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="75%" colspan="2">折扣优惠</td>
+        <td align="right"><strong class="green">¥0.00</strong></td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="75%" colspan="2">抵扣金额</td>
+        <td align="right"><strong class="green">¥0.00</strong></td>
+      </tr>
+
+      <tr>
+        <td class="dingimg" width="75%" colspan="2">运费</td>
+        <td align="right"><strong class="orange">¥20.80</strong></td>
+      </tr>
+    </table>
+
+  </div><!--dingdanlist/-->
+<% end %>
+
+<div class="height1"></div>
+<div class="gwcpiao">
+  <table>
+    <tr>
+      <th width="10%">
+        <a href="javascript:history.back(-1)">
+          <span class="glyphicon glyphicon-menu-left"></span>
+        </a>
+      </th>
+      <td width="50%">总计：<strong class="orange"></strong></td>
+      <td width="40%"><a href="success.html" class="jiesuan">提交</a></td>
+    </tr>
+  </table>
+</div>
+<style type="text/css">
+  input{
+    border: none;
+  }
+</style>

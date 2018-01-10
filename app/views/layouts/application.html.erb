@@ -4,11 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>测试</title>
-    <%= javascript_include_tag "/javascripts/jquery.js" %>
-    <%= javascript_include_tag "/javascripts/jquery_ujs.js"%>
+    
+    <%= javascript_include_tag "application" %>
     <%= stylesheet_link_tag "application" %>
     <%= yield :css %>
-    <%= javascript_include_tag "application" %>
+    
     <%= yield :js %>
     <%= csrf_meta_tag %>
   </head>
@@ -16,6 +16,6 @@
 <body>
 
 <%= yield %>
-
+<%#= render "notice" %>
 </body>
 </html>

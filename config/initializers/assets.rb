@@ -9,4 +9,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w[
 	 application.css back.css
       home.js false.js back.js 
+      mobile.css mobile.js 
     ]
+Rails.application.config.assets.precompile += %w( ckeditor/*)

@@ -12,3 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+function showTip(type, str) {
+    PNotify.removeAll();
+    type = {
+        "success": "",
+        "warning": 'error'
+    }[type];
+    var delay = type == 'error' ? 5000 : 2000;
+    new PNotify({
+        title: '通知',
+        text: str,
+        type: type,
+        remove: true,
+        delay: delay
+    });
+    return false;
+}

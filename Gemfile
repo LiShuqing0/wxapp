@@ -7,7 +7,7 @@ gem 'mysql2'
   
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]  
 gem 'coffee-script-source','1.8.0'  
-  
+gem 'rails-i18n'
 # Use SCSS for stylesheets  
 gem 'sass-rails', '~> 5.0'  
 # Use Uglifier as compressor for JavaScript assets  
@@ -45,13 +45,23 @@ gem 'pry-rails'
 gem 'pry-remote'
 gem 'pry-nav'
 gem 'rest-client'
+gem 'lazy_high_charts'
+
+gem 'rmagick', '2.16.0', require: 'RMagick'
+gem 'mini_magick'
+
+gem 'carrierwave'
+
+gem "ckeditor", "4.0.4"
+
 
 gem "select2-rails"
 # xml解析
 gem "nokogiri", "1.6.7.2"
   
 group :development, :test do  
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console  
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'quiet_assets' #assets 日志打印问题  
   gem 'byebug'  
   
  #gem 'sqlite3'  

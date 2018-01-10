@@ -5,9 +5,9 @@ class InitDb < ActiveRecord::Migration
 	    t.string   "mobile"
 	    t.integer  "status",                 :default => 0,     :null => false
 	    t.string   "token"
-	    t.integer  "province_id",           
-	    t.integer  "city_id",               
-	    t.integer  "district_id",            
+	    t.integer  "province_id"           
+	    t.integer  "city_id"               
+	    t.integer  "district_id"            
 	    t.string   "address"
 	    t.string   "password_digest"
 	    t.text     "roles"

@@ -1,6 +1,8 @@
 class Back::AccountsController < Back::BaseController
 	
   def index
+    @query = Account.ransack(params[:q])
+    @accounts = @query.result.page(params[:page]).per(10)
   end
 
   def new

@@ -3,7 +3,7 @@ class Back::ArticlesController < Back::BaseController
 	
   def index
   	@query = Article.ransack(params[:q])
-    @articles = @query.result.page(params[:page]).per(10)
+    @articles = @query.result.page(params[:page])
     respond_to :html, :json
   end
 
@@ -14,7 +14,7 @@ class Back::ArticlesController < Back::BaseController
   def create
   	@article = Article.new(article_params)
   	if @article.save
-  	  redirect_to articles_path
+  	  redirect_to back_articles_path
   	else
   	  render :edit
   	end

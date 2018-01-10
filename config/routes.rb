@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root to: 'articles#index'
 
   get 'password_resets/new'
@@ -29,6 +30,15 @@ Rails.application.routes.draw do
 
   namespace :back do
     resources :articles
+    resources :accounts
 
   end
+
+  namespace :mobile do
+    resources :users
+    resources :articles
+    resources :flows
+    resources :settlements
+  end
+
 end
